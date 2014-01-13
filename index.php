@@ -14,7 +14,7 @@ Distributeur.php se chargera avec ces informations d'instancier les controlleurs
 Index.php est l'entr? de tout le processus. Hors avec la structure d'url voulu on ne peut se permettre de dupliquer ? chaque fois index.php pour chaque url servant de param?tres.
 Le fichier .htaccess ? la racine du site permet de contourner le probl?me.
 Il va rediriger toute requ?te url vers le index.php sauf si ceux ci sont des fichier existant ou dossiers existant (si on appelle une image on voudrait tomber dessus et non pas sur index.php)
-
+test
 -->
 
 
