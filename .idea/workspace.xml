@@ -31,7 +31,7 @@
     <file path="/conf.php" changelist="5835c867-cd24-4dff-9874-b0da56da7830" time="1388680916625" ignored="false" />
     <file path="/conf.xml" changelist="5835c867-cd24-4dff-9874-b0da56da7830" time="1389196229093" ignored="false" />
     <file path="/test.php" changelist="5835c867-cd24-4dff-9874-b0da56da7830" time="1389375931319" ignored="false" />
-    <file path="/Dummy.txt" changelist="5835c867-cd24-4dff-9874-b0da56da7830" time="1389629645715" ignored="false" />
+    <file path="/Dummy.txt" changelist="5835c867-cd24-4dff-9874-b0da56da7830" time="1389629680753" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -566,7 +566,11 @@
       <created>1389629648715</created>
       <updated>1389629648715</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="un test">
+      <created>1389629699113</created>
+      <updated>1389629699113</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
