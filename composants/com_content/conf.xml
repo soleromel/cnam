@@ -1,0 +1,8 @@
+<config>
+    <nom>User</nom>
+    <auteur>Stéphane Soler</auteur>
+    <description>Ce module sert à ajouter dans une page un bloc de connexion</description>
+    <dependences>
+        <composants>com_user</composants>
+    </dependences>
+</config>

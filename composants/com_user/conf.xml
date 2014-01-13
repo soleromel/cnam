@@ -1,0 +1,7 @@
+<config>
+    <nom>User</nom>
+    <auteur>Stéphane Soler</auteur>
+    <description>Ce composant gère la connexion à la partie sécurisée du site</description>
+    <dependences>
+    </dependences>
+</config>
