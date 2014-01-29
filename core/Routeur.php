@@ -51,4 +51,9 @@ class Routeur{
 		return $params;
 	}
 
+    static function aller ($controleur, $action){
+
+        BASE_URL.'/user/login'
+    }
+
 }

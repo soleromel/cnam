@@ -6,4 +6,8 @@
         <composant>com_user</composant>
         <composant>com_content</composant>
     </dependances>
+    <fichiers>
+        <main>mod_user.php</main>
+        <helper></helper>
+    </fichiers>
 </config>

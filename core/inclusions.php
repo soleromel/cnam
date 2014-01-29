@@ -18,6 +18,8 @@ class Inclure{
 
     static function Module($nom){
         $conf=Inclure::getConfXML(ROOT.DS.'modules'.DS.$nom);
+
+        //dépendances
         if ($conf->dependances->composant[0]!==''){
             foreach ($conf->dependances->composant as $val){
                 if (!isset(Inclure::$inclus[$val->__toString()])){
@@ -25,20 +27,33 @@ class Inclure{
                 }
             }
         }
+        //helpers
+        if ($conf->fichiers->helper[0]!==''){
+            foreach ($conf->dependances->composant as $val){
+            }
+        }
+        //main ou point d'entré du module
+        if ($conf->fichiers->main[0]!==''){
+                $main=$conf->fichiers->main->__toString();
+                include_once(MODULES.DS.$nom.DS.$main);
+
+            }
 
     }
 
 
     static function Composants($nom, $dossier=null){
         if(Inclure::$inclus[$nom]==1){return;}
+
         if (($dossier !== null)&&(is_dir(COMPOSANTS.DS.$nom.DS.$dossier))){
             $comDir=opendir(COMPOSANTS.DS.$nom.DS.$dossier);
             while(false!==($fichiers = readdir($comDir))){
                 if (($fichiers!=='.') && ($fichiers!=='..')){
-                    include(COMPOSANTS.DS.$nom.DS.$dossier.DS.$fichiers);
-                    echo $fichiers;
+                    include_once(COMPOSANTS.DS.$nom.DS.$dossier.DS.$fichiers);
                 }
             }
         }
+
+
     }
 }

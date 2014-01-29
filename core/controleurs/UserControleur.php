@@ -3,8 +3,6 @@ class UserControleur extends Controleur{
 
     function __construct(){
         parent::__construct();
-        print_r($_SESSION);
-        print_r($_POST);
         call_user_func_array(array($this,$this->requete->action),$this->requete->params);
 
 
@@ -12,8 +10,8 @@ class UserControleur extends Controleur{
     }
 
     function login(){
-        $user = $this->getUserSecure($nom, $pass);
-        $_SESSION["$user->nomUser"];
+        $user = $this->getUserSecure($_POST["login"], $_POST["password"]);
+        $_SESSION["nomUser"]= $user["nom"];
     }
 
     function getUser(){
