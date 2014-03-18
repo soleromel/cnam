@@ -1,6 +1,6 @@
 <div class="login-form">
     <h2>Se connecter</h2>
-    <form method="POST" action="<?php echo BASE_URL.'/user/login' ?>">
+    <form method="POST" action="<?php Routeur::route('User','login'); ?>">
         <fieldset>
             <div class="clearfix">
                 <input type="text" name="login" placeholder="login">

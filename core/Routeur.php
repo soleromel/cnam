@@ -51,9 +51,21 @@ class Routeur{
 		return $params;
 	}
 
-    static function aller ($controleur, $action){
+    static function route($controleur, $action){
 
-        BASE_URL.'/user/login'
+        $req=Fabrique::getFabrique()->getRequete();
+        $_SESSION['prevControleur']=$req->controleur;
+        $_SESSION['prevAction']=$req->action;
+        $_SESSION['prevParams']=$req->params;
+        echo(BASE_URL."/".$controleur."/".$action) ;
+
+    }
+
+    static function redirige($controleur, $action, $params=null){
+        if ($params===null){
+            header('Location: '.BASE_URL.'/'.$controleur.'/'.$action.'/');
+            exit();
+        }
     }
 
 }

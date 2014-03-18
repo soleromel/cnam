@@ -11,7 +11,12 @@ class UserControleur extends Controleur{
 
     function login(){
         $user = $this->getUserSecure($_POST["login"], $_POST["password"]);
-        $_SESSION["nomUser"]= $user["nom"];
+        if (isset ($user)){
+            $_SESSION["nomUser"]= $user["nom"];
+            Routeur::redirige('Page','1');
+        }
+        else
+            echo('erreur : login ou identifiant incorrect');
     }
 
     function getUser(){
